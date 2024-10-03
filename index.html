@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>URL Embed Example</title>
+      <title>My Cool Website</title>
       <style>
           body, html {
               margin: 0;
@@ -16,12 +16,20 @@
               height: 100%;
               border: none;
           }
+          #urlInputContainer {
+              position: absolute;
+              top: 20px;
+              left: 20px;
+              z-index: 1000;
+          }
       </style>
   </head>
   <body>
   
-      <input type="text" id="urlInput" placeholder="Enter URL here">
-      <button onclick="assignURL()">Submit</button>
+      <div id="urlInputContainer">
+          <input type="text" id="urlInput" placeholder="Enter URL here">
+          <button onclick="assignURL()">Submit</button>
+      </div>
   
       <embed id="embedFrame" src="" type="text/html">
   
@@ -30,6 +38,7 @@
               var myURL = document.getElementById("urlInput").value;
               document.getElementById("embedFrame").setAttribute("src", myURL);
               document.getElementById("urlInputContainer").style.display = "none";
+              alert("The URL is: " + myURL);
           }
       </script>
   </body>
