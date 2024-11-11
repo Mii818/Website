@@ -34,15 +34,15 @@
       <embed id="embedFrame" src="" type="text/html">
   
       <script>
-          function assignURL() {
-              var myURL = document.getElementById("urlInput").value;
-              document.getElementById("embedFrame").setAttribute("src", myURL);
-              document.getElementById("urlInputContainer").style.display = "none";
-          }
           function handleKeyPress(event) {
               if (event.key === 'Enter') {
                   assignURL();
               }
+          }  
+          function assignURL() {
+              var myURL = document.getElementById("urlInput").value;
+              document.getElementById("embedFrame").setAttribute("src", myURL);
+              document.getElementById("urlInputContainer").style.display = "none";
           }
       </script>
   </body>
