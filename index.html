@@ -9,18 +9,25 @@
               margin: 0;
               padding: 0;
               height: 100%;
+              background-color: #666699;
           }
-          #embedFrame {
+          embed {
               position: fixed;
               width: 100%;
               height: 100%;
               border: none;
+              display: none;
           }
           #urlInputContainer {
               position: absolute;
-              top: 20px;
-              left: 20px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
               z-index: 1000;
+          }
+          #urlInput {
+              background-color: #9966FF;
+              border-color: #6666CC;
           }
       </style>
   </head>
