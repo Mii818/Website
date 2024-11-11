@@ -41,14 +41,9 @@
       <embed id="embedFrame" src="" type="text/html">
 
       <script>
-          function enterUrl() {
-              var url = document.getElementById("urlInput").value;
-              document.getElementById("urlInputContainer").style.display = "none";
-              document.getElementById("embedFrame").style.display = "block";
-          }
           function handleKeyPress(event) {
               if (event.key === 'Enter') {
-                  enterUrl();
+                  assignUrl();
               }
           }
           function assignURL() {
