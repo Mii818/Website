@@ -34,6 +34,7 @@
       <embed id="embedFrame" src="" type="text/html">
   
       <script>
+          document.getElementById("urlInput").addEventListener("keypress", handleKeyPress);
           function handleKeyPress(event) {
               if (event.key === 'Enter') {
                   assignURL();
