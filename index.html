@@ -18,21 +18,28 @@
           }
           #urlInputContainer {
               position: absolute;
-              top: 20px;
-              left: 20px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
               z-index: 1000;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+          #urlInput {
+              width: 200px;
+          }
+          #urlInputContainer button {
+              width: 208px;
           }
       </style>
   </head>
   <body>
-  
       <div id="urlInputContainer">
           <input type="text" id="urlInput" placeholder="Enter URL here">
           <button onclick="assignURL()">Submit</button>
       </div>
-  
       <embed id="embedFrame" src="" type="text/html">
-  
       <script>
           document.getElementById("urlInput").addEventListener("keypress", handleKeyPress);
           function handleKeyPress(event) {
