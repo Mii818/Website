@@ -1,58 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Cool Website</title>
-        <style>
-            body, html {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-            }
-            #embedFrame {
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                border: none;
-            }
-            #urlInputContainer {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 1000;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            #urlInput {
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>My Cool Website</title>
+      <style>
+          body, html {
+              margin: 0;
+              padding: 0;
+              height: 100%;
+          }
+          #embedFrame {
+              position: fixed;
+              width: 100%;
+              height: 100%;
+              border: none;
+          }
+          #urlInputContainer {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 1000;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+          #urlInput {
               width: 200px;
-            }
-            #urlInputContainer button {
-                width: 208px;
-                margin-top: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="urlInputContainer">
-            <input type="text" id="urlInput" placeholder="Enter URL here">
-            <button onclick="assignURL()">Submit</button>
-        </div>
-        <embed id="embedFrame" src="" type="text/html">
-        <script>
-            document.getElementById("urlInput").addEventListener("keypress", handleKeyPress);
-            function handleKeyPress(event) {
-                if (event.key === 'Enter') {
-                    assignURL();
-                }
-            }  
-            function assignURL() {
-                var myURL = document.getElementById("urlInput").value;
-                document.getElementById("embedFrame").setAttribute("src", myURL);
-                document.getElementById("urlInputContainer").style.display = "none";
-            }
-        </script>
-    </body>
+          }
+          #urlInputContainer button {
+              width: 200px;
+          }
+      </style>
+  </head>
+  <body>
+      <div id="urlInputContainer">
+          <input type="text" id="urlInput" placeholder="Enter URL here">
+          <button onclick="assignURL()">Submit</button>
+      </div>
+      <embed id="embedFrame" src="" type="text/html">
+      <script>
+          document.getElementById("urlInput").addEventListener("keypress", handleKeyPress);
+          function handleKeyPress(event) {
+              if (event.key === 'Enter') {
+                  assignURL();
+              }
+          }  
+          function assignURL() {
+              var myURL = document.getElementById("urlInput").value;
+              document.getElementById("embedFrame").setAttribute("src", myURL);
+              document.getElementById("urlInputContainer").style.display = "none";
+          }
+      </script>
+  </body>
 </html>
