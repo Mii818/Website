@@ -49,6 +49,9 @@
           }  
           function assignURL() {
               var myURL = document.getElementById("urlInput").value;
+              if(!myURL.startsWith("http")) {
+                  myURL = "http://" + myURL;
+              }
               document.getElementById("embedFrame").setAttribute("src", myURL);
               document.getElementById("urlInputContainer").style.display = "none";
           }
